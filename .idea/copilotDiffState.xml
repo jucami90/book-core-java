@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/AGENTS.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/AGENTS.md" />
+              <option name="updatedContent" value="# AGENTS.md&#10;&#10;## Project Overview&#10;&#10;A Java learning/reference project following the **Core Java** book (Cay Horstmann). Each source file is a standalone program demonstrating a specific Java concept. There is no production application, API, or shared state between files.&#10;&#10;## Java Version &amp; Language Features&#10;&#10;This project uses **Java 24+ preview features** (implicit classes, JEP 463/477):&#10;&#10;- **No class declaration** — files use top-level `void main()` instead of `public static void main(String[] args)`&#10;- **`IO.println()` / `IO.readln()`** — use the `java.io.IO` implicit import, NOT `System.out.println()` or `Scanner`&#10;- **No explicit imports** — implicit classes auto-import `java.io.IO`, `java.util.Arrays`, `java.math.BigInteger`, etc.&#10;- **No package declarations** — files live in the unnamed package&#10;&#10;When adding new files, follow this pattern (see `src/Chapter3/HelloWorld.java`):&#10;```java&#10;void main() {&#10;    IO.println(&quot;output here&quot;);&#10;}&#10;```&#10;&#10;## Project Structure&#10;&#10;```&#10;src/&#10;  Chapter3/       # Chapter-based folders matching the book&#10;    Arrays.java   # One concept per file, named after the concept&#10;```&#10;&#10;- **No build tool** (no Maven/Gradle) — this is an IntelliJ IDEA module (`CoreJava.iml`)&#10;- **Source root**: `src/` (configured in `CoreJava.iml`)&#10;- Each `.java` file is an independent, runnable program&#10;&#10;## Running Files&#10;&#10;Run any file directly via IntelliJ or command line:&#10;```sh&#10;java --enable-preview src/Chapter3/HelloWorld.java&#10;```&#10;&#10;There are no tests, no CI, and no build step.&#10;&#10;## Conventions When Adding New Code&#10;&#10;1. **One concept per file** — create a new `.java` file for each topic (e.g., `Generics.java`, `Streams.java`)&#10;2. **Organize by chapter** — place files in `src/ChapterN/` matching the book structure&#10;3. **Use inline comments** to explain concepts, especially edge cases (see `IntegerTypes.java` for overflow examples, `ControlFlow.java` for switch expression variants)&#10;4. **Prefer `IO.readln()`** for interactive input over `Scanner` (see `Arrays.java` line 24)&#10;5. **Block scoping** — use bare `{}` blocks to isolate multi-step examples within a single `main()` (see `Arrays.java` lottery section)&#10;6. **Keep files self-contained** — no cross-file dependencies, no shared utilities&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
